@@ -32,8 +32,3 @@ jobs:
           go test -tags '!purego' -bench='BenchmarkField64(Mul|Square)AMD64' -benchmem -count=10 . | tee bench.txt
           echo '--- benchstat ---'
           benchstat bench.txt
-      - name: Upload benchmark output
-        uses: actions/upload-artifact@6f51c2450a5ee6272586270642e9b496bc808c5c # v4.6.0
-        with:
-          name: field64-bench
-          path: dcrec/secp256k1/bench.txt
