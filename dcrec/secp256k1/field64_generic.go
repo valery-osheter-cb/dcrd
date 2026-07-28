@@ -2,7 +2,7 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-//go:build !amd64 || purego
+//go:build (!amd64 && !arm64) || purego
 
 package secp256k1
 
